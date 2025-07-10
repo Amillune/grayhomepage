@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta and title -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Full-screen image popup overlay -->
+  <div class="popup-overlay" id="popup">
+    <img src="joker.png" alt="Popup" class="popup-image" />
+  </div>
+
+  <!-- Page Heading -->
+  <h1 id="main-heading">WELCOME TO MY HOMEPAGE</h1>
+  <p class="subtitle">IT'S A WORK IN PROGRESS...</p>
+
+  <!-- Main grid container for cards -->
+  <div class="grid">
+
+    <!-- Card 1: About Me -->
+    <a href="aboutMe/aboutHenrich.html" style="text-decoration: none; color: inherit;">
+      <div class="card card1 delay-1">
+        <img src="1.gif" alt="Card 1" class="card-image">
+        <div class="card-footer">
+          <p class="card-title">ABOUT ME</p>
+          <p class="card-subtitle">MY NAME IS...HENRICH GRAY</p>
+          <div class="progress-container">
+            <div class="progress-bar1"></div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Activity Cards -->
+    <a href="periodicTable/Funky Town.html" style="text-decoration: none; color: inherit;">
+      <div class="card card2 delay-2">
+        <img src="2.gif" alt="Card 2" class="card-image">
+        <div class="card-footer">
+          <p class="card-title">LAB ACTIVITY #1</p>
+          <p class="card-subtitle">PERIODIC TABLE</p>
+          <div class="progress-container">
+            <div class="progress-bar2"></div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <a href="17sdgsReport/new 1.html" style="text-decoration: none; color: inherit;">
+      <div class="card card3 delay-3">
+        <img src="3.gif" alt="Card 3" class="card-image">
+        <div class="card-footer">
+          <p class="card-title">LAB ACTIVITY #2</p>
+          <p class="card-subtitle">SDG GOAL 16</p>
+          <div class="progress-container">
+            <div class="progress-bar3"></div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <a href="form/17sdgs.html" style="text-decoration: none; color: inherit;">
+      <div class="card card1 delay-4">
+        <img src="4.gif" alt="Card 4" class="card-image">
+        <div class="card-footer">
+          <p class="card-title">LAB ACTIVITY #3</p>
+          <p class="card-subtitle">INFORMATION FORM</p>
+          <div class="progress-container">
+            <div class="progress-bar4"></div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <a href="17sdg/homePage11.html" style="text-decoration: none; color: inherit;">
+      <div class="card card2 delay-5">
+        <img src="5.gif" alt="Card 5" class="card-image">
+        <div class="card-footer">
+          <p class="card-title">LAB ACTIVITY #4</p>
+          <p class="card-subtitle">THE 17 SDGS</p>
+          <div class="progress-container">
+            <div class="progress-bar5"></div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Join Form Card -->
+    <div class="card card3 delay-6" onclick="showDisclaimer()">
+      <img src="6.gif" alt="Card 6" class="card-image">
+      <div class="card-footer">
+        <p class="card-title">CONTACT US</p>
+        <p class="card-subtitle">CLICK AND FILL TO CONTACT US</p>
+        <div class="progress-container">
+          <div class="progress-bar6"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button to trigger random popup -->
+  <button class="popup-button" onclick="showPopup()">A PHANTOM THIEF NEVER HIDES FOREVER</button>
+
+    <!-- Footer info -->
+  <footer>
+    © 2025 Henrich Gray. ATLUS owns all character rights. Visual assets include GIFs from Pinterest.
+  </footer>
+
+  <!-- Join Form Modal -->
+  <div class="disclaimer-modal" id="disclaimer-modal">
+    <div class="disclaimer-content">
+      <img src="werwer.gif" alt="Join GIF" class="disclaimer-image">
+      <h2>Dedsec has given you the truth, Do what you will</h2>
+      <form id="join-form">
+        <input type="text" id="name-input" name="name" placeholder="Enter your first name" required />
+        <input type="email" id="email-input" name="email" placeholder="Enter your email" required />
+        <input type="text" id="message-input" name="message" placeholder="Enter a Short Message" /> 
+        <button type="submit" class="disclaimer-close">Send</button>
+        <button type="button" class="disclaimer-close" onclick="closeModal()">Exit</button>
+        <p id="response" class="success"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- External JS File -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Henrich Gray</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="ABOUTMEstyle.css">
+</head>
+<body>
+
+  <!-- Main Container -->
+  <div class="about-container">
+    
+    <!-- Profile Card with Hover Swap Effect -->
+    <div class="profile-card" onmouseover="swapImage(true)" onmouseout="swapImage(false)">
+      <div class="profile-inner">
+        <div class="card card1 delay-1">
+          <!-- Profile Image -->
+          <img src="henrich.jpg" alt="Henrich Gray" class="profile-image" id="profile-img">
+          <!-- Card Text -->
+          <div class="card-footer">
+            <p class="card-title">HENRICH GRAY</p>
+            <p class="card-subtitle">GREATEST OF ALL TIME (THE G.0.A.T)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bio and Social Links -->
+    <div class="about-text">
+      <h1>ABOUT</h1>
+      <p>
+        My name is <b>Henrich Gray</b>. I'm 20 years old and currently living in Angono, Rizal — just walking distance from the Angono Petroglyphs. I love my girlfriend very much.
+        <br><br>
+        I'm currently studying at Far Eastern University, taking up a Bachelor of Science in Information Technology with a specialization in Cybersecurity. I usually get home by 8 PM at the latest.
+      </p>
+
+      <!-- Personal Quote -->
+      <div class="quote">
+        "A phantom thief never hides forever."
+      </div>
+
+      <!-- Social Media Buttons -->
+      <div class="social-buttons">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/amillune_/" target="_blank" class="social-button" title="Spotify">
+          <img src="instagram.jpg" alt="Instagram">
+        </a>
+        <!-- Instagram/Facebook -->
+        <a href="https://www.facebook.com/graaaay.28/" target="_blank" class="social-button" title="Instagram">
+          <img src="facebook.png" alt="Instagram">
+        </a>
+      </div>
+
+      <!-- Back to Homepage -->
+      <a href="../index.html" class="back-button">RETURN TO HOMEPAGE</a>
+    </div>
+  </div>
+
+  <!-- Image Swap Script -->
+  <script>
+    function swapImage(hover) {
+      const img = document.getElementById('profile-img');
+      img.style.opacity = '0.5'; // fade out
+      setTimeout(() => {
+        img.src = hover
+          ? 'me2.jpg?t=' + new Date().getTime() // force reload on hover
+          : 'henrich.jpg'; // reset on mouseout
+        img.style.opacity = '1'; // fade in
+      }, 150);
+    }
+  </script>
+
+</body>
+</html>

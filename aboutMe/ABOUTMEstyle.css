@@ -1,0 +1,140 @@
+/* General Body Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: url("bgHomePage.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Main Flex Container */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Profile Card Styles */
+.profile-card {
+  width: 300px;
+  margin-right: 40px;
+  border-radius: 10px;
+  padding: 3px;
+  background: linear-gradient(to bottom right, red, gray); /* red theme */
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Inner part of the card */
+.profile-inner {
+  background-color: #111;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+/* Hover Effect on Profile Card */
+.profile-card:hover {
+  transform: scale(1.03);
+}
+
+/* Profile Image Styling */
+.profile-image {
+  width: 100%;
+  display: block;
+  transition: opacity 0.4s ease;
+}
+
+/* Footer of the card */
+.card-footer {
+  padding: 15px;
+  background-color: #222;
+  border-top: 2px solid red; /* emphasized with red */
+}
+
+/* Title and subtitle */
+.card-title {
+  font-size: 1.4em;
+  color: white;
+  margin: 0;
+}
+
+.card-subtitle {
+  font-size: 1em;
+  color: #aaa;
+  margin: 5px 0 0;
+}
+
+/* Text beside the profile */
+.about-text {
+  max-width: 600px;
+  line-height: 1.8;
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+/* Personal quote styling */
+.quote {
+  font-style: italic;
+  color: #ff4d4d; /* red-toned */
+  margin-top: 20px;
+}
+
+/* Back to homepage button */
+.back-button {
+  margin-top: 40px;
+  display: inline-block;
+  background-color: orange;
+  color: black;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+/* Hover effect on button */
+.back-button:hover {
+  background-color: red;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Social Buttons Container */
+.social-buttons {
+  margin-top: 10px;
+}
+
+/* Individual Social Button Styling */
+.social-button {
+  width: 55px;
+  height: 55px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+/* Social Button Hover Effect */
+.social-button:hover {
+  transform: scale(1.2);
+}
+
+/* Image inside social button */
+.social-button img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid black;
+}
