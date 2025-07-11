@@ -1,7 +1,7 @@
 
 const popup = document.getElementById('popup');
 const popupImage = popup.querySelector('.popup-image');
-const images = ['joker.png', 'makoto.png','yusuke.png','anne.png','haru.png','ryuji.png','bitchInheat.png'];
+const images = ['joker.png', 'makoto.png','yusuke.png','anne.png','haru.png','ryuji.png','bitchInHeat.png'];
 
 function showPopup() {
   const randomImage = images[Math.floor(Math.random() * images.length)];
@@ -46,19 +46,18 @@ form.addEventListener("submit", (e) => {
 
   const name = document.getElementById('name-input').value.trim();
 
-if (name) {
-  const confirmSend = confirm("YOU CAN CONTACT ME HERE... ARE YOU SURE ABOUT YOUR MESSAGE? YOU DO KNOW THAT IT WILL BE SAVED RIGHT?\n\nCLICK OK FOR YES, CANCEL FOR NO.");
+  if (name) {
+    let accepted = false;
 
-  if (confirmSend) {
-    // User accepted
-    const header = document.getElementById('main-heading');
-    header.textContent = `WELCOME TO MY HOMEPAGE, ${name.toUpperCase()}`;
-    alert("WELCOME!!");
-  } else {
-    // User canceled — message won't be sent
-    alert("Your message was canceled and not sent.");
-  }
-}
+    while (!accepted) {
+      const response = confirm("YOU CAN CONTACT ME HERE... ARE YOU SURE ABOUT YOUR MESSAGE? YOU DO KNOW THAT IT WILL BE SAVED RIGHT?\n\nCLICK OK FOR YES, CANCEL FOR NO.");
+      if (response) {
+        accepted = true;
+        const header = document.getElementById('main-heading');
+        header.textContent = `WELCOME TO MY HOMEPAGE, ${name.toUpperCase()}`;
+        alert("WELCOME!!");
+      }
+    }
   }
 
   const formData = new FormData(form);
