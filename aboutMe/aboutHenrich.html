@@ -13,39 +13,33 @@
 </head>
 <body>
 
-  <!-- Main Container -->
   <div class="about-container">
     
-    <!-- Profile Card with Hover Swap Effect -->
+    <!-- Profile Card -->
     <div class="profile-card" onmouseover="swapImage(true)" onmouseout="swapImage(false)">
       <div class="profile-inner">
         <div class="card card1 delay-1">
-          <!-- Profile Image -->
           <img src="henrich.jpg" alt="Henrich Gray" class="profile-image" id="profile-img">
-          <!-- Card Text -->
           <div class="card-footer">
             <p class="card-title">HENRICH GRAY</p>
-            <p class="card-subtitle">USER</p>
+            <p class="card-subtitle">GREATEST OF ALL TIME (THE G.0.A.T)</p>
           </div>
         </div>
       </div>
     </div>
 
-     <!-- Bio and Social Links -->
+    <!-- About Text Content -->
     <div class="about-text">
       <h1>ABOUT</h1>
 
       <h2>Professional Summary</h2>
       <p>
-       I am a cyber security student, who carries a strong educational background with growing interests in areas such as: network security and ethical hacking. I am always learning and developing hands-on skills especially in penetration testing and threat analysis. After hard work and dedication to my studies I hope to join a team to better learn from other professionals, to gain experience, and to help protect digital systems.
+        I am a cyber security student, who carries a strong educational background with growing interests in areas such as: network security and ethical hacking. I am always learning and developing hands-on skills especially in penetration testing and threat analysis. After hard work and dedication to my studies I hope to join a team to better learn from other professionals, to gain experience, and to help protect digital systems.
       </p>
 
       <h2>Contact Information</h2>
       <p><strong>Email:</strong> henrichgray628@gmail.com</p>
       <p><strong>Phone Number:</strong> 09**845**86</p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/Amillune" target="_blank">github.com/Amillune</a></p>
-      <!-- You can uncomment the line below if you get a LinkedIn URL -->
-      <!-- <p><strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/yourprofile</a></p> -->
 
       <h2>Education</h2>
       <ul>
@@ -61,12 +55,10 @@
         </li>
       </ul>
 
-      <!-- Personal Quote -->
       <div class="quote">
         "A phantom thief never hides forever."
       </div>
 
-      <!-- Social Media Buttons -->
       <div class="social-buttons">
         <a href="https://www.instagram.com/amillune_/" target="_blank" class="social-button" title="Instagram">
           <img src="instagram.jpg" alt="Instagram">
@@ -74,25 +66,25 @@
         <a href="https://www.facebook.com/graaaay.28/" target="_blank" class="social-button" title="Facebook">
           <img src="facebook.png" alt="Facebook">
         </a>
+        <a href="https://github.com/Amillune" target="_blank" class="social-button" title="GitHub">
+          <img src="github.jpg" alt="GitHub">
+        </a>
       </div>
 
-      <!-- Back to Homepage -->
       <a href="../index.html" class="back-button">RETURN TO HOMEPAGE</a>
     </div>
   </div>
-
-
 
   <!-- Image Swap Script -->
   <script>
     function swapImage(hover) {
       const img = document.getElementById('profile-img');
-      img.style.opacity = '0.5'; // fade out
+      img.style.opacity = '0.5';
       setTimeout(() => {
         img.src = hover
-          ? 'me2.jpg?t=' + new Date().getTime() // force reload on hover
-          : 'henrich.jpg'; // reset on mouseout
-        img.style.opacity = '1'; // fade in
+          ? 'me2.jpg?t=' + new Date().getTime()
+          : 'henrich.jpg';
+        img.style.opacity = '1';
       }, 150);
     }
   </script>
