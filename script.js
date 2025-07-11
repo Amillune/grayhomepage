@@ -46,18 +46,19 @@ form.addEventListener("submit", (e) => {
 
   const name = document.getElementById('name-input').value.trim();
 
-  if (name) {
-    let accepted = false;
+if (name) {
+  const confirmSend = confirm("YOU CAN CONTACT ME HERE... ARE YOU SURE ABOUT YOUR MESSAGE? YOU DO KNOW THAT IT WILL BE SAVED RIGHT?\n\nCLICK OK FOR YES, CANCEL FOR NO.");
 
-    while (!accepted) {
-      const response = confirm("YOU CAN CONTACT ME HERE... ARE YOU SURE ABOUT YOUR MESSAGE? YOU DO KNOW THAT IT WILL BE SAVED RIGHT?\n\nCLICK OK FOR YES, CANCEL FOR NO.");
-      if (response) {
-        accepted = true;
-        const header = document.getElementById('main-heading');
-        header.textContent = `WELCOME TO MY HOMEPAGE, ${name.toUpperCase()}`;
-        alert("WELCOME!!");
-      }
-    }
+  if (confirmSend) {
+    // User accepted
+    const header = document.getElementById('main-heading');
+    header.textContent = `WELCOME TO MY HOMEPAGE, ${name.toUpperCase()}`;
+    alert("WELCOME!!");
+  } else {
+    // User canceled — message won't be sent
+    alert("Your message was canceled and not sent.");
+  }
+}
   }
 
   const formData = new FormData(form);
